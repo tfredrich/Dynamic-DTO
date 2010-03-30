@@ -60,7 +60,7 @@ package com.strategicgains.dto.serialization.json.impl;
 // Since: Apr 26, 2007
 //
 //--------------------------------------
-package org.xerial.json.impl;
+package com.strategicgains.dto.serialization.json.impl;
 }
 
 @rulecatch {

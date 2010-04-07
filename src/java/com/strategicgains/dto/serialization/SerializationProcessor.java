@@ -17,6 +17,8 @@
 
 package com.strategicgains.dto.serialization;
 
+import java.lang.reflect.Type;
+
 import com.strategicgains.dto.DataTransferObject;
 
 /**
@@ -51,10 +53,10 @@ implements Serializer, Deserializer
 	// SECTION: DESERIALIZER
 
 	@Override
-	public DataTransferObject deserialize(Object serialized)
+	public DataTransferObject deserialize(Object serialized, Type type)
 	throws DeserializationException
 	{
-		return deserializer.deserialize(serialized);
+		return deserializer.deserialize(serialized, type);
 	}
 
 

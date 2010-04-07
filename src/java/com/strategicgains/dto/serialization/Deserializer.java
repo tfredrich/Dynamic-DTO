@@ -17,6 +17,8 @@
 
 package com.strategicgains.dto.serialization;
 
+import java.lang.reflect.Type;
+
 import com.strategicgains.dto.DataTransferObject;
 
 /**
@@ -27,6 +29,6 @@ import com.strategicgains.dto.DataTransferObject;
  */
 public interface Deserializer
 {
-	public DataTransferObject deserialize(Object serialized)
+	public DataTransferObject deserialize(Object serialized, Type type)
 	throws DeserializationException;
 }

@@ -17,6 +17,8 @@
 
 package com.strategicgains.dto.serialization.xml;
 
+import java.lang.reflect.Type;
+
 import com.strategicgains.dto.DataTransferObject;
 import com.strategicgains.dto.serialization.DeserializationException;
 import com.strategicgains.dto.serialization.Deserializer;
@@ -29,7 +31,7 @@ public class XmlDeserializer
 implements Deserializer
 {
 	@Override
-	public DataTransferObject deserialize(Object serialized)
+	public DataTransferObject deserialize(Object serialized, Type type)
 	throws DeserializationException
 	{
 		// TODO Auto-generated method stub

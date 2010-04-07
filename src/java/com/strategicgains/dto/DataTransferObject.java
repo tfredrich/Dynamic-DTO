@@ -23,5 +23,4 @@ package com.strategicgains.dto;
  */
 public interface DataTransferObject
 {
-
 }

@@ -17,19 +17,66 @@
 
 package com.strategicgains.dto.serialization.json;
 
-import com.strategicgains.dto.serialization.SerializationProcessor;
+import static com.strategicgains.util.date.DateAdapterConstants.TIMESTAMP_OUTPUT_FORMAT;
+
+import java.lang.reflect.Type;
+import java.util.Date;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.strategicgains.dto.DataTransferObject;
+import com.strategicgains.dto.serialization.DeserializationException;
+import com.strategicgains.dto.serialization.Deserializer;
+import com.strategicgains.dto.serialization.SerializationException;
+import com.strategicgains.dto.serialization.Serializer;
 
 /**
+ * JsonProcessor handles serialization from/to JSON using the Google GSON library.
+ * 
  * @author Todd Fredrich
  * @since Mar 30, 2010
  */
 public class JsonProcessor
-extends SerializationProcessor
+implements Serializer, Deserializer
 {
-	// SECTION: CONSTRUCTORS
+	// SECTION: INSTANCE VARIABLES
 
+	private Gson gson;
+
+	
+	// SECTION: CONSTRUCTORS
+	
 	public JsonProcessor()
 	{
-		super(new JsonSerializer(), new JsonDeserializer());
+		this(new GsonBuilder()
+			.disableHtmlEscaping()
+			.registerTypeAdapter(Date.class, new GsonTimestampSerializer())
+			.setDateFormat(TIMESTAMP_OUTPUT_FORMAT)
+			.create());
+	}
+	
+	public JsonProcessor(Gson gson)
+	{
+		this.gson = gson;
+	}
+
+
+	// SECTION: DESERIALIZATION
+
+	@Override
+	public DataTransferObject deserialize(Object serialized, Type type)
+	throws DeserializationException
+	{
+		return gson.fromJson((String) serialized, type);
+	}
+
+	
+	// SECTION: SERIALIZATION
+
+	@Override
+	public Object serialize(DataTransferObject model)
+	throws SerializationException
+	{
+		return gson.toJson(model);
 	}
 }

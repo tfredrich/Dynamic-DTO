@@ -1,5 +1,5 @@
 /*
- * Copyright 2010, Strategic Gains, Inc.
+ * Copyright 2009, Strategic Gains, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,22 +17,19 @@
 
 package com.strategicgains.dto.serialization.json;
 
-import com.strategicgains.dto.DataTransferObject;
-import com.strategicgains.dto.serialization.DeserializationException;
-import com.strategicgains.dto.serialization.Deserializer;
+import com.strategicgains.util.date.TimestampAdapter;
 
 /**
- * @author Todd Fredrich
- * @since Mar 30, 2010
+ * A GSON serializer for Date instances represented (and to be presented) as a timestamps (dates with time component).
+ * 
+ * @author toddf
+ * @since Nov 13, 2009
  */
-public class JsonDeserializer
-implements Deserializer
+public class GsonTimestampSerializer
+extends GsonDateSerializer
 {
-	@Override
-	public DataTransferObject deserialize(Object serialized)
-	throws DeserializationException
+	public GsonTimestampSerializer()
 	{
-		// TODO Auto-generated method stub
-		return null;
+		super(new TimestampAdapter());
 	}
 }

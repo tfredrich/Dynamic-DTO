@@ -1,0 +1,28 @@
+The RestX Project
+Copyright 2009, Strategic Gains, Inc.
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+----
+This product includes XStream:
+Please visit the XStream web site at CodeHaus for more information:
+
+  * http://xstream.codehaus.org/
+
+Copyright 2003-2006, Joe Walnes
+Copyright 2006-2007, XStream Committers
+----
+This product includes XPP3:
+Please visit the XPP web site for more information:
+
+  * http://www.extreme.indiana.edu/xgws/xsoap/xpp/
+
+Copyright 2002 Extreme! Lab, Indiana University.
+----
+This product includes Google GSON:
+Please visit the GSON web site at Google Code for more information:
+
+  * http://code.google.com/p/google-gson/
+
+Copyright (C) 2010 Google Inc.
+----

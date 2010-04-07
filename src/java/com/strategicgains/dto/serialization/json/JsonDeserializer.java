@@ -17,19 +17,20 @@
 
 package com.strategicgains.dto.serialization.json;
 
-import com.strategicgains.dto.Model;
+import com.strategicgains.dto.DataTransferObject;
 import com.strategicgains.dto.serialization.DeserializationException;
 import com.strategicgains.dto.serialization.Deserializer;
 
 /**
- * @author toddf
+ * @author Todd Fredrich
  * @since Mar 30, 2010
  */
 public class JsonDeserializer
 implements Deserializer
 {
 	@Override
-	public Model deserialize(Object serialized) throws DeserializationException
+	public DataTransferObject deserialize(Object serialized)
+	throws DeserializationException
 	{
 		// TODO Auto-generated method stub
 		return null;

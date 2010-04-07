@@ -25,14 +25,15 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 /**
- * @author toddf
+ * @author Todd Fredrich
  * @since Mar 30, 2010
  */
-public class Model
+public class AbstractDto
+implements DataTransferObject
 {
 	// SECTION: CONSTANTS
 
-	private static final String DEFAULT_NAME = "Model";
+	private static final String DEFAULT_NAME = "DTO";
 
 
 	// SECTION: INSTANCE VARIABLES
@@ -43,7 +44,7 @@ public class Model
 
 	// SECTION: CONSTRUCTORS
 
-	public Model()
+	public AbstractDto()
 	{
 		this(DEFAULT_NAME);
 	}
@@ -52,7 +53,7 @@ public class Model
 	 * @param name
 	 *            the name of this model.
 	 */
-	public Model(String name)
+	public AbstractDto(String name)
 	{
 		super();
 		setName(name);

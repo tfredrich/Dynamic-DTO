@@ -15,17 +15,24 @@
  * limitations under the License.
  */
 
-package com.strategicgains.dto;
+package com.strategicgains.dto.serialization.xml;
 
-import java.lang.reflect.Type;
+import com.strategicgains.dto.DataTransferObject;
+import com.strategicgains.dto.serialization.DeserializationException;
+import com.strategicgains.dto.serialization.Deserializer;
 
 /**
- * @author toddf
- * @since Mar 30, 2010
+ * @author Todd Fredrich
+ * @since Apr 7, 2010
  */
-public class Attribute
+public class XmlDeserializer
+implements Deserializer
 {
-	private String name;
-	private Type type;
-	private Object value;
+	@Override
+	public DataTransferObject deserialize(Object serialized)
+	throws DeserializationException
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

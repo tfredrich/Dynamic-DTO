@@ -18,7 +18,7 @@
 package com.strategicgains.dto.serialization;
 
 /**
- * @author toddf
+ * @author Todd Fredrich
  * @since Mar 30, 2010
  */
 public class SerializationException

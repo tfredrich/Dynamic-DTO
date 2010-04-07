@@ -17,12 +17,12 @@
 
 package com.strategicgains.dto.serialization;
 
-import com.strategicgains.dto.Model;
+import com.strategicgains.dto.DataTransferObject;
 
 /**
  * A SerlializationProcessor can handle both serialization and deserialization.
  * 
- * @author toddf
+ * @author Todd Fredrich
  * @since Mar 30, 2010
  */
 public class SerializationProcessor
@@ -51,7 +51,7 @@ implements Serializer, Deserializer
 	// SECTION: DESERIALIZER
 
 	@Override
-	public Model deserialize(Object serialized)
+	public DataTransferObject deserialize(Object serialized)
 	throws DeserializationException
 	{
 		return deserializer.deserialize(serialized);
@@ -61,7 +61,7 @@ implements Serializer, Deserializer
 	// SECTION: SERIALIZER
 
 	@Override
-	public Object serialize(Model model)
+	public Object serialize(DataTransferObject model)
 	throws SerializationException
 	{
 		return serializer.serialize(model);

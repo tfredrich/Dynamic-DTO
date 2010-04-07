@@ -1,1 +1,1 @@
-Java, being a static language doesn't have the benifits of dynamic languages when it comes to mapping JSON and/or XML to domain objects. Dynamic-DTO enables runtime creation of domain-type models.
+Java, being a static language doesn't have the benefits of dynamic languages when it comes to mapping JSON and/or XML to domain objects. Dynamic-DTO enables runtime creation of Data Transfer Objects (DTOs) that are mappable to/from your domain model(s) auto-magically.

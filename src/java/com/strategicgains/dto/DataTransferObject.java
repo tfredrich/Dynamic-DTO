@@ -15,18 +15,13 @@
  * limitations under the License.
  */
 
-package com.strategicgains.dto.serialization;
-
-import com.strategicgains.dto.DataTransferObject;
+package com.strategicgains.dto;
 
 /**
- * Deserializes a previously serialized DTO model (e.g. a JSON or XML string) into a Model
- * 
  * @author Todd Fredrich
- * @since Mar 30, 2010
+ * @since Apr 7, 2010
  */
-public interface Deserializer
+public interface DataTransferObject
 {
-	public DataTransferObject deserialize(Object serialized)
-	throws DeserializationException;
+
 }

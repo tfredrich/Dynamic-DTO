@@ -20,7 +20,7 @@ package com.strategicgains.dto.serialization.json;
 import com.strategicgains.dto.serialization.SerializationProcessor;
 
 /**
- * @author toddf
+ * @author Todd Fredrich
  * @since Mar 30, 2010
  */
 public class JsonProcessor

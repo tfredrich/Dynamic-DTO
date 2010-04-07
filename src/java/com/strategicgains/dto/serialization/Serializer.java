@@ -17,16 +17,16 @@
 
 package com.strategicgains.dto.serialization;
 
-import com.strategicgains.dto.Model;
+import com.strategicgains.dto.DataTransferObject;
 
 /**
  * Serializes a Model (DTO) into an output format (e.g. JSON or XML).
  * 
- * @author toddf
+ * @author Todd Fredrich
  * @since Mar 30, 2010
  */
 public interface Serializer
 {
-	public Object serialize(Model model)
+	public Object serialize(DataTransferObject model)
 	throws SerializationException;
 }

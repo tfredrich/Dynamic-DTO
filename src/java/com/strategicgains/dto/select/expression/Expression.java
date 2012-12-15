@@ -13,13 +13,13 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-package com.strategicgains.dto;
+package com.strategicgains.dto.select.expression;
 
 /**
- * @author fredta2
+ * @author toddf
  * @since Dec 14, 2012
  */
-public interface Callback<T>
+public interface Expression
 {
-	void handle(T value);
+	Object evaluate(Object argument);
 }

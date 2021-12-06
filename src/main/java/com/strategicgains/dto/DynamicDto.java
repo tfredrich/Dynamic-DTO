@@ -21,7 +21,6 @@ import java.lang.reflect.Field;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -32,53 +31,25 @@ import java.util.regex.Pattern;
  * @author Todd Fredrich
  * @since Mar 30, 2010
  */
-public class DynamicDto
+public class DynamicDto<T>
 {
 	// SECTION: CONSTANTS
 
-	private static final String DEFAULT_NAME = "DTO";
 	private static final String ARRAY_INDEX_REGEX = "(\\w*)\\[(\\d)\\]";
 	private static final Pattern ARRAY_INDEX_PATTERN = Pattern.compile(ARRAY_INDEX_REGEX);
 
 
 	// SECTION: INSTANCE VARIABLES
 
-	private String name;
-	private Map<String, Object> attributes = new HashMap<String, Object>();
+	private Map<String, Object> attributes = new HashMap<>();
 
 
 	// SECTION: CONSTRUCTORS
 
 	public DynamicDto()
 	{
-		this(DEFAULT_NAME);
-	}
-
-	/**
-	 * @param name
-	 *            the name of this model.
-	 */
-	public DynamicDto(String name)
-	{
 		super();
-		setName(name);
 	}
-
-
-	// SECTION: NAME ACCESSORS/MUTATORS
-
-	public String getName()
-	{
-		return name;
-	}
-
-	public void setName(String name)
-	{
-		this.name = name;
-	}
-
-
-	// SECTION: ATTRIBUTE ACCESSING
 
 	public void setAttribute(String name, Object value)
 	{

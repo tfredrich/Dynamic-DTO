@@ -15,14 +15,12 @@
 */
 package com.strategicgains.dto.select.expression;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
-
-import com.strategicgains.dto.DynamicDtoTest.InnerClass;
 
 /**
  * @author toddf

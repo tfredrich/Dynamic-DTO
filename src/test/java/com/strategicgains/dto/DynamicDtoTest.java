@@ -7,11 +7,22 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import org.junit.Test;
 
 public class DynamicDtoTest
 {
+	@Test
+	public void shouldCreateDtoValues()
+	{
+		UUID id = UUID.randomUUID();
+		Release r = new Release(id);
+		r.setDescription("description1");
+		r.setName("release42");
+		DynamicDto<Release> dto = DtoFactory.create(r);
+		dto.attributes();
+	}
 	@Test
 	public void shouldRetrieveSingleInstance()
 	{
